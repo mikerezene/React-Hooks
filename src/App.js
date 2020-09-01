@@ -153,33 +153,33 @@ const App = () => {
 
 //USE_EFFECT
 
-//   function App(){
+  function App(){
 
-//     const [isOn , setIsOn ] = useState(false);
-//     const [timer, setTimer ] = useState(0);
+    const [isOn , setIsOn ] = useState(false);
+    const [timer, setTimer ] = useState(0);
 
-//     useEffect(() => {
-//      let interval;
-//      console.log("Effect runs");
-//      if(isOn){
-//       interval = setInterval(()=>setTimer((timer) =>timer +1),1000);
-//      }
+    useEffect(() => {
+     let interval;
+     console.log("Effect runs");
+     if(isOn){
+      interval = setInterval(()=>setTimer((timer) =>timer +1),1000);
+     }
 
-//       return () => clearInterval(interval);
-//     },[isOn]);
+      return () => clearInterval(interval);
+    },[isOn]);
 
-//     const onReset = () => {setTimer(0); setIsOn(false);}
+    const onReset = () => {setTimer(0); setIsOn(false);}
     
 
-//     return (
-//       <div>
-//         {timer}
-//         {!isOn && <button type="button" onClick={() =>setIsOn(true)}>Start</button>}
-//         {isOn && <button type="button" onClick= {() => setIsOn(false)}>Stop</button>}
-//         <button type="button" onClick={() => onReset()}>Reset</button>
+    return (
+      <div>
+        {timer}
+        {!isOn && <button type="button" onClick={() =>setIsOn(true)}>Start</button>}
+        {isOn && <button type="button" onClick= {() => setIsOn(false)}>Stop</button>}
+        <button type="button" onClick={() => onReset()}>Reset</button>
 
-//         </div>
-//     );
-// }
+        </div>
+    );
+}
 
 export default App;
